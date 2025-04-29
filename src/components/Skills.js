@@ -69,7 +69,7 @@ const Skills = ({ darkMode }) => {
         darkMode ? "bg-gray-900" : "bg-gray-50"
       }`}
     >
-      <div className="container mx-auto">
+      <div className="w-full max-w-screen-xl mx-auto">
         <h2 
           className={`text-3xl md:text-4xl font-bold text-center mb-12 ${
             darkMode ? "text-white" : "text-gray-900"
@@ -96,7 +96,6 @@ const Skills = ({ darkMode }) => {
               }`}>
                 {category.title}
               </h3>
-
               <div className="grid grid-cols-2 gap-4">
                 {category.skills.map((skill, skillIndex) => (
                   <div

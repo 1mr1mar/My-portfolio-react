@@ -56,7 +56,7 @@ const Projects = ({ darkMode }) => {
       id="projects" 
       className={`py-20 px-4 ${darkMode ? 'bg-gray-900' : 'bg-gray-50'}`}
     >
-      <div className="container mx-auto">
+      <div className="w-full max-w-screen-xl mx-auto">
         <h2 
           className={`text-3xl md:text-4xl font-bold text-center mb-12 ${darkMode ? 'text-white' : 'text-gray-900'}`}
           data-aos="fade-up"
@@ -65,7 +65,7 @@ const Projects = ({ darkMode }) => {
         </h2>
         
         <div 
-          className="flex justify-center mb-12 space-x-4"
+          className="flex flex-wrap justify-center gap-4 mb-12"
           data-aos="fade-up"
           data-aos-delay="200"
         >
@@ -130,24 +130,20 @@ const Projects = ({ darkMode }) => {
                   ))}
                 </div>
                 
-                <div className="flex space-x-3">
+                <div className="flex flex-wrap gap-3">
                   <a
                     href={project.dimo}
-                    className={`px-4 py-2 rounded-lg ${
-                      darkMode 
-                        ? "bg-blue-500 hover:bg-blue-600" 
-                        : "bg-blue-500 hover:bg-blue-600"
-                    } text-white font-medium transition-all duration-300 hover:scale-105`}
+                    className="group px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/30 relative overflow-hidden"
                   >
-                    Live Demo
+                    <span className="relative z-10">Live Demo</span>
+                    <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
                   </a>
                   <a 
                     href={project.code} 
-                    className={`px-4 py-2 rounded-lg text-sm border ${
-                      darkMode ? 'border-gray-600 hover:border-blue-500' : 'border-gray-300 hover:border-blue-500'
-                    } font-medium transition-all duration-300 hover:scale-105`}
+                    className="group px-6 py-3 rounded-lg border border-gray-300 hover:border-blue-500 font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg relative overflow-hidden"
                   >
-                    Code
+                    <span className="relative z-10">Code</span>
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
                   </a>
                 </div>
               </div>
@@ -164,10 +160,11 @@ const Projects = ({ darkMode }) => {
             href="https://github.com/1mr1mar" 
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/30"
+            className="group inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/30 relative overflow-hidden"
           >
-            <i className="bx bxl-github text-2xl mr-2"></i>
-            <span>View More Projects</span>
+            <i className="bx bxl-github text-2xl mr-2 relative z-10"></i>
+            <span className="relative z-10">View More Projects</span>
+            <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
           </a>
         </div>
       </div>

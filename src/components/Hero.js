@@ -52,7 +52,7 @@ const Hero = ({ darkMode }) => {
         ></div>
       </div>
 
-      <div className="container mx-auto relative z-0">
+      <div className="w-full max-w-screen-xl mx-auto relative z-0">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div 
             className="order-2 md:order-1 animate-fadeIn"
@@ -84,7 +84,7 @@ const Hero = ({ darkMode }) => {
             </p>
 
             <div 
-              className="flex space-x-4"
+              className="flex flex-wrap gap-4"
               data-aos="fade-up"
               data-aos-delay="700"
             >
@@ -122,7 +122,7 @@ const Hero = ({ darkMode }) => {
             data-aos-duration="1000"
           >
             <div 
-              className="w-96 h-96 md:w-[40rem] md:h-[40rem] overflow-hidden rounded-2xl shadow-2xl transition-all duration-500 hover:scale-105 hover:shadow-blue-500/30 relative group"
+              className="w-72 h-72 md:w-96 md:h-96 overflow-hidden rounded-2xl shadow-2xl transition-all duration-500 hover:scale-105 hover:shadow-blue-500/30 relative group"
               style={{ transform: `translate(${mousePosition.x * 0.5}px, ${mousePosition.y * 0.5}px)` }}
               onMouseEnter={() => setIsHovering(true)}
               onMouseLeave={() => setIsHovering(false)}

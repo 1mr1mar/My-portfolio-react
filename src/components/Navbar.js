@@ -6,127 +6,135 @@ const Navbar = ({ darkMode, toggleDarkMode, activeSection }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      } 
+      setIsScrolled(window.scrollY > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const navLinks = [
+    { name: "Home", href: "#home" },
+    { name: "About", href: "#about" },
+    { name: "Projects", href: "#projects" },
+    { name: "Skills", href: "#skills" },
+    { name: "Contact", href: "#contact" },
+  ];
 
   return (
     <nav
-      className={`fixed w-full z-10 transition-all duration-300 
-      ${darkMode ? "bg-gray-800" : "bg-white"} 
-      ${isScrolled ? "shadow-lg bg-opacity-90 backdrop-blur-md" : "shadow-md"}`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled || isMenuOpen
+          ? darkMode
+            ? "bg-gray-900/90 backdrop-blur-md"
+            : "bg-white/90 backdrop-blur-md"
+          : "bg-transparent"
+      }`}
     >
-      <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center py-4">
+      <div className="w-full px-4">
+        <div className="flex items-center justify-between h-16">
           <div className="text-2xl font-bold">
             <span className="text-blue-500">Mar</span>Portfolio
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-6 items-center justify-end w-full">
-            {["home", "about", "projects", "skills", "contact"].map((item) => (
+          {/* Desktop Menu */}
+          <div className="hidden md:flex items-center space-x-8">
+            {navLinks.map((link) => (
               <a
-                key={item}
-                href={`#${item}`}
-                className={`capitalize transition-colors hover:text-blue-500 ${
-                  activeSection === item ? "text-blue-500" : ""
+                key={link.name}
+                href={link.href}
+                className={`text-sm font-medium transition-colors ${
+                  activeSection === link.href.substring(1)
+                    ? darkMode
+                      ? "text-blue-400"
+                      : "text-blue-600"
+                    : darkMode
+                    ? "text-gray-300 hover:text-white"
+                    : "text-gray-600 hover:text-gray-900"
                 }`}
               >
-                {item}
+                {link.name}
               </a>
             ))}
             <button
               onClick={toggleDarkMode}
-              className="flex ml-6 p-2 rounded-full "
+              className={`p-2 rounded-full ${
+                darkMode
+                  ? "bg-gray-700 text-yellow-300"
+                  : "bg-gray-100 text-gray-900"
+              }`}
             >
-              {darkMode ? "🌞" : "🌙"}
+              {darkMode ? (
+                <i className="bx bx-sun text-xl"></i>
+              ) : (
+                <i className="bx bx-moon text-xl"></i>
+              )}
             </button>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center">
+            <button
+              onClick={toggleDarkMode}
+              className={`p-2 rounded-full mr-2 ${
+                darkMode
+                  ? "bg-gray-700 text-yellow-300"
+                  : "bg-gray-100 text-gray-900"
+              }`}
+            >
+              {darkMode ? (
+                <i className="bx bx-sun text-xl"></i>
+              ) : (
+                <i className="bx bx-moon text-xl"></i>
+              )}
+            </button>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2 focus:outline-none"
-              aria-label="Toggle Menu"
+              className={`p-2 rounded-md ${
+                darkMode
+                  ? "text-gray-300 hover:text-white"
+                  : "text-gray-600 hover:text-gray-900"
+              }`}
+              aria-label="Toggle menu"
             >
               {isMenuOpen ? (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
+                <i className="bx bx-x text-2xl"></i>
               ) : (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h16m-7 6h7"
-                  />
-                </svg>
+                <i className="bx bx-menu text-2xl"></i>
               )}
             </button>
           </div>
         </div>
 
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden">
-            <div
-              className={`py-4 px-2 space-y-3 ${
-                darkMode ? "bg-gray-800" : "bg-white"
-              }`}
-            >
-              {["home", "about", "projects", "skills", "contact"].map(
-                (item) => (
-                  <a
-                    key={item}
-                    href={`#${item}`}
-                    className={`block capitalize py-2 px-4 transition-colors ${
-                      activeSection === item ? "text-blue-500" : ""
-                    }`}
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {item}
-                  </a>
-                )
-              )}
-              <button
-                onClick={toggleDarkMode}
-                className="block w-full text-left py-2 px-4"
+        {/* Mobile Menu */}
+        <div
+          className={`md:hidden transition-all duration-300 ease-in-out ${
+            isMenuOpen
+              ? "max-h-64 opacity-100"
+              : "max-h-0 opacity-0 overflow-hidden"
+          } ${darkMode ? "bg-gray-800" : "bg-white"}`}
+        >
+          <div className="py-2 space-y-1">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                onClick={() => setIsMenuOpen(false)}
+                className={`block px-3 py-2 rounded-md text-base font-medium ${
+                  activeSection === link.href.substring(1)
+                    ? darkMode
+                      ? "bg-gray-700 text-blue-400"
+                      : "bg-gray-100 text-blue-600"
+                    : darkMode
+                    ? "text-gray-300 hover:bg-gray-700 hover:text-white"
+                    : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
+                }`}
               >
-                {darkMode
-                  ? "Switch to Light Mode 🌞"
-                  : "Switch to Dark Mode 🌙"}
-              </button>
-            </div>
+                {link.name}
+              </a>
+            ))}
           </div>
-        )}
+        </div>
       </div>
     </nav>
   );

@@ -41,7 +41,7 @@ const Contact = ({ darkMode }) => {
         darkMode ? "bg-gray-800" : "bg-gray-100"
       }`}
     >
-      <div className="container mx-auto">
+      <div className="w-full max-w-screen-xl mx-auto">
         <h2 
           className="text-3xl font-bold mb-12 text-center"
           data-aos="fade-up"
@@ -104,7 +104,7 @@ const Contact = ({ darkMode }) => {
               data-aos-delay="600"
             >
               <h4 className="font-bold mb-3">Follow Me</h4>
-              <div className="flex space-x-4">
+              <div className="flex flex-wrap gap-4">
                 <a 
                   href="https://github.com/1mr1mar" 
                   className="w-10 h-10 rounded-full bg-blue-500 text-white flex items-center justify-center transition-transform hover:scale-110"
@@ -189,9 +189,10 @@ const Contact = ({ darkMode }) => {
 
               <button
                 type="submit"
-                className="w-full px-6 py-3 rounded-lg bg-blue-500 text-white font-medium transition-transform hover:scale-110 hover:shadow-lg"
+                className="group w-full px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/30 relative overflow-hidden"
               >
-                Send Message
+                <span className="relative z-10">Send Message</span>
+                <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
               </button>
             </form>
           </div>

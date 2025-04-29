@@ -68,14 +68,14 @@ const App = () => {
   };
 
   return (
-    <div className={`min-h-screen transition-colors duration-500 ${
+    <div className={`min-h-screen transition-colors duration-500 overflow-x-hidden ${
       darkMode 
         ? 'bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white' 
         : 'bg-gradient-to-b from-gray-50 via-blue-50 to-gray-50 text-gray-900'
     }`}>
       {/* Progress bar */}
       <div 
-        className="fixed top-0 left-0 h-1 bg-gradient-to-r from-blue-500 to-purple-500 transition-all duration-300"
+        className="fixed top-0 left-0 h-1 bg-gradient-to-r from-blue-500 to-purple-500 transition-all duration-300 z-50"
         style={{ 
           width: `${scrollProgress}%`,
           boxShadow: '0 0 10px rgba(59, 130, 246, 0.5)'
@@ -88,7 +88,7 @@ const App = () => {
         activeSection={activeSection} 
       />
       
-      <main className="transition-all duration-500">
+      <main className="transition-all duration-500 w-full">
         <Hero darkMode={darkMode} />
         <About darkMode={darkMode} />
         <Projects darkMode={darkMode} />

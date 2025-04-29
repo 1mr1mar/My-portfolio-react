@@ -3,8 +3,8 @@ import profileImage from "../pic/profil.jpg";
 
 const About = ({ darkMode }) => {
   return (
-    <section id="about overflow-hidden" className="py-16 px-4">
-      <div className="container mx-auto">
+    <section id="about" className="py-16 px-4 overflow-hidden">
+      <div className="w-full max-w-screen-xl mx-auto">
         <h2 
           className={`text-3xl font-bold mb-12 text-center ${
             darkMode ? "text-white" : "text-gray-900"
@@ -112,11 +112,12 @@ const About = ({ darkMode }) => {
             
             <a
               href="https://www.youtube.com/watch?v=0VAAS9xnS5U&list=RD0VAAS9xnS5U&start_radio=1"
-              className="inline-block px-6 py-3 rounded-lg bg-blue-500 text-white font-medium transition-transform hover:scale-110 hover:shadow-lg"
+              className="group inline-block px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/30 relative overflow-hidden"
               data-aos="fade-up"
               data-aos-delay="800"
             >
-              📄 Download Resume
+              <span className="relative z-10">📄 Download Resume</span>
+              <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
             </a>
           </div>
         </div>
