@@ -111,7 +111,7 @@ const About = ({ darkMode }) => {
             </div>
             
             <a
-              href="https://www.youtube.com/watch?v=0VAAS9xnS5U&list=RD0VAAS9xnS5U&start_radio=1"
+              href="https://drive.google.com/file/d/1oLsGplqRiFNprWCL7OCA1q7xZVc2qHxV/view?usp=drive_link"
               className="group inline-block px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/30 relative overflow-hidden"
               data-aos="fade-up"
               data-aos-delay="800"
