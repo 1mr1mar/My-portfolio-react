@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import projectimg1 from'../pic/project1.png';
-import projectimg2 from'../pic/project2.jpg';
-import projectimg3 from'../pic/project3.png';
+import projectimg1 from "../pic/project1.png";
+import projectimg2 from "../pic/project2.jpg";
+import projectimg3 from "../pic/project3.png";
+import restaurantProjectImg from "../pic/project4.png";
 
 const Projects = ({ darkMode }) => {
   const [activeFilter, setActiveFilter] = useState("all");
@@ -12,22 +13,24 @@ const Projects = ({ darkMode }) => {
     {
       id: 1,
       title: "E-Commerce Website",
-      description: "A full-featured online store with shopping cart and payment integration.",
+      description:
+        "A full-featured online store with shopping cart and payment integration.",
       tags: ["Html", "CSS", "java-script"],
       image: projectimg1,
       dimo: "https://chipper-clafoutis-944b48.netlify.app/",
       code: "https://github.com/1mr1mar/e-commers-Html-css-js",
-      category: "web"
+      category: "web",
     },
     {
       id: 2,
       title: "E-Commerce Website",
-      description: "A productivity app for organizing tasks and tracking progress.",
+      description:
+        "A productivity app for organizing tasks and tracking progress.",
       tags: ["React", "Css", "Java script"],
       image: projectimg2,
       dimo: "https://github.com/1mr1mar/E-commers-website-React",
       code: "https://github.com/1mr1mar/E-commers-website-React",
-      category: "web"
+      category: "web",
     },
     {
       id: 3,
@@ -37,34 +40,48 @@ const Projects = ({ darkMode }) => {
       image: projectimg3,
       dimo: "https://marwan-ganbour.netlify.app/",
       code: "https://github.com/1mr1mar/portfolio",
-      category: "web"
-    }
+      category: "web",
+    },
+    {
+      id: 4,
+      title: "Restaurant Management System",
+      description:
+        "A full-featured web app for managing restaurant meals, orders, reservations, and more.",
+      tags: ["React", "Tailwind CSS", "Node.js", "Express", "MySQL"],
+      image: restaurantProjectImg,
+      dimo: "https://pfe-2025-delta.vercel.app/",
+      code: "https://github.com/1mr1mar",
+      category: "web",
+    },
   ];
 
   const filters = [
     { name: "All", value: "all" },
     { name: "Web", value: "web" },
-    { name: "App", value: "app" }
+    { name: "App", value: "app" },
   ];
 
-  const filteredProjects = activeFilter === "all" 
-    ? projects 
-    : projects.filter(project => project.category === activeFilter);
+  const filteredProjects =
+    activeFilter === "all"
+      ? projects
+      : projects.filter((project) => project.category === activeFilter);
 
   return (
-    <section 
-      id="projects" 
-      className={`py-20 px-4 ${darkMode ? 'bg-gray-900' : 'bg-gray-50'}`}
+    <section
+      id="projects"
+      className={`py-20 px-4 ${darkMode ? "bg-gray-900" : "bg-gray-50"}`}
     >
       <div className="w-full max-w-screen-xl mx-auto">
-        <h2 
-          className={`text-3xl md:text-4xl font-bold text-center mb-12 ${darkMode ? 'text-white' : 'text-gray-900'}`}
+        <h2
+          className={`text-3xl md:text-4xl font-bold text-center mb-12 ${
+            darkMode ? "text-white" : "text-gray-900"
+          }`}
           data-aos="fade-up"
         >
           My Projects
         </h2>
-        
-        <div 
+
+        <div
           className="flex flex-wrap justify-center gap-4 mb-12"
           data-aos="fade-up"
           data-aos-delay="200"
@@ -85,12 +102,14 @@ const Projects = ({ darkMode }) => {
             </button>
           ))}
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project, index) => (
             <div
               key={project.id}
-              className={`rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl ${darkMode ? 'bg-gray-800' : 'bg-white'}`}
+              className={`rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl ${
+                darkMode ? "bg-gray-800" : "bg-white"
+              }`}
               data-aos="fade-up"
               data-aos-delay={index * 100}
               onMouseEnter={() => setHoveredProject(index)}
@@ -102,26 +121,30 @@ const Projects = ({ darkMode }) => {
                   alt={project.title}
                   className="w-full h-48 object-cover transition-transform duration-500 hover:scale-110"
                 />
-                <div 
+                <div
                   className={`absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 transition-opacity duration-300 ${
                     hoveredProject === index ? "opacity-100" : ""
                   }`}
                 >
                   <div className="absolute bottom-0 left-0 right-0 p-4">
-                    <h3 className="text-white text-xl font-semibold mb-2">{project.title}</h3>
-                    <p className="text-gray-200 text-sm">{project.description}</p>
+                    <h3 className="text-white text-xl font-semibold mb-2">
+                      {project.title}
+                    </h3>
+                    <p className="text-gray-200 text-sm">
+                      {project.description}
+                    </p>
                   </div>
                 </div>
               </div>
-              
+
               <div className="p-4">
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag, tagIndex) => (
                     <span
                       key={tagIndex}
                       className={`px-2 py-1 text-xs rounded-full ${
-                        darkMode 
-                          ? "bg-gray-700 text-gray-300" 
+                        darkMode
+                          ? "bg-gray-700 text-gray-300"
                           : "bg-gray-100 text-gray-700"
                       }`}
                     >
@@ -129,7 +152,7 @@ const Projects = ({ darkMode }) => {
                     </span>
                   ))}
                 </div>
-                
+
                 <div className="flex flex-wrap gap-3">
                   <a
                     href={project.dimo}
@@ -138,8 +161,8 @@ const Projects = ({ darkMode }) => {
                     <span className="relative z-10">Live Demo</span>
                     <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
                   </a>
-                  <a 
-                    href={project.code} 
+                  <a
+                    href={project.code}
                     className="group px-6 py-3 rounded-lg border border-gray-300 hover:border-blue-500 font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg relative overflow-hidden"
                   >
                     <span className="relative z-10">Code</span>
@@ -150,14 +173,14 @@ const Projects = ({ darkMode }) => {
             </div>
           ))}
         </div>
-        
-        <div 
+
+        <div
           className="text-center mt-12"
           data-aos="fade-up"
           data-aos-delay="500"
         >
-          <a 
-            href="https://github.com/1mr1mar" 
+          <a
+            href="https://github.com/1mr1mar"
             target="_blank"
             rel="noopener noreferrer"
             className="group inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/30 relative overflow-hidden"
