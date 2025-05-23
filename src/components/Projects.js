@@ -3,6 +3,7 @@ import projectimg1 from "../pic/project1.png";
 import projectimg2 from "../pic/project2.jpg";
 import projectimg3 from "../pic/project3.png";
 import restaurantProjectImg from "../pic/project4.png";
+import projectimg5 from "../pic/project5.png";
 
 const Projects = ({ darkMode }) => {
   const [activeFilter, setActiveFilter] = useState("all");
@@ -53,6 +54,17 @@ const Projects = ({ darkMode }) => {
       code: "https://github.com/1mr1mar",
       category: "web",
     },
+    {
+    id: 5,
+      title: "hotel Management System",
+      description:
+        "A full-featured web app for managing hotel orders, reservations, and more.",
+      tags: ["php", "Tailwind CSS", "MySQL"],
+      image: projectimg5,
+      dimo: "https://github.com/1mr1mar",
+      code: "https://github.com/1mr1mar",
+      category: "web",
+    }
   ];
 
   const filters = [
