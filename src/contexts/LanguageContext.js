@@ -1,5 +1,5 @@
 import React, { createContext, useState, useContext, useEffect } from 'react';
-import { translations } from '../translations';
+import translations from '../translations';
 
 const LanguageContext = createContext();
 
@@ -35,7 +35,7 @@ export const LanguageProvider = ({ children }) => {
   };
 
   return (
-    <LanguageContext.Provider value={{ language, t, toggleLanguage, isRTL }}>
+    <LanguageContext.Provider value={{ language, setLanguage, t, toggleLanguage, isRTL }}>
       {children}
     </LanguageContext.Provider>
   );

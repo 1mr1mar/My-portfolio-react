@@ -1,173 +1,301 @@
-export const translations = {
+const translations = {
   en: {
     nav: {
-      home: "Home",
-      about: "About",
-      projects: "Projects",
-      skills: "Skills",
-      contact: "Contact"
+      home: 'Home',
+      about: 'About',
+      skills: 'Skills',
+      projects: 'Projects',
+      contact: 'Contact'
     },
     hero: {
-      greeting: "Hi, I'm Marwan",
-      title: "Frontend Developer & UI Designer",
-      description: "I build responsive and interactive web applications with modern technologies.",
-      contactMe: "Contact Me",
-      viewProjects: "View Projects"
+      title: 'Hi, I\'m Marwan',
+      subtitle: 'Frontend Developer & UI Designer',
+      description: 'I build responsive and interactive web applications with modern technologies.',
+      cta: 'View My Work',
+      greeting: 'Hi, I\'m',
+      contactMe: 'Contact Me',
+      viewProjects: 'View Projects'
     },
     about: {
-      title: "About Me",
-      role: "Frontend Developer & UI Designer",
-      description1: "With 2+ years of experience building modern web applications, I specialize in creating responsive, accessible, and performant user interfaces.",
-      description2: "I'm passionate about clean code, user experience, and staying updated with the latest web technologies.",
-      name: "Name",
-      email: "Email",
-      location: "Location",
-      freelance: "Freelance",
-      available: "Available",
-      downloadResume: "Download Resume"
-    },
-    projects: {
-      title: "My Projects",
-      all: "All",
-      web: "Web",
-      mobile: "Mobile",
-      liveDemo: "Live Demo",
-      code: "Code"
+      title: 'About Me',
+      description: 'I am a passionate full-stack developer with experience in building modern web applications. I love creating intuitive and efficient solutions to complex problems.',
+      experience: 'Years of Experience',
+      projects: 'Projects Completed',
+      clients: 'Happy Clients',
+      role: 'Full Stack Developer',
+      name: 'Name',
+      email: 'Email',
+      location: 'Location',
+      freelance: 'Freelance',
+      available: 'Available',
+      downloadResume: 'Download Resume'
     },
     skills: {
-      title: "My Skills",
-      frontend: "Frontend",
-      backend: "Backend",
-      database: "Database",
-      languages: "Programming Languages",
-      tools: "Tools",
-      software: "Software"
+      title: 'Skills & Expertise',
+      subtitle: 'Technologies I work with',
+      frontend: 'Frontend',
+      backend: 'Backend',
+      database: 'Database',
+      programming: 'Programming Languages',
+      tools: 'Tools',
+      software: 'Software'
+    },
+    projects: {
+      title: 'My Projects',
+      subtitle: 'Recent work',
+      viewDemo: 'Live Demo',
+      viewCode: 'View Code',
+      viewMore: 'View More Projects',
+      filters: {
+        all: 'All',
+        web: 'Web',
+        app: 'App'
+      },
+      project1: {
+        title: 'E-Commerce Website',
+        description: 'A full-featured online store with shopping cart and payment integration.'
+      },
+      project2: {
+        title: 'E-Commerce Website',
+        description: 'A productivity app for organizing tasks and tracking progress.'
+      },
+      project3: {
+        title: 'My Portfolio',
+        description: 'Anything you might want to know about me you\'ll find here'
+      },
+      project4: {
+        title: 'Restaurant Management System',
+        description: 'A full-featured web app for managing restaurant meals, orders, reservations, and more.'
+      },
+      project5: {
+        title: 'Hotel Management System',
+        description: 'A full-featured web app for managing hotel orders, reservations, and more.'
+      }
     },
     contact: {
-      title: "Get In Touch",
-      subtitle: "Feel free to reach out for collaborations or just a friendly hello!",
-      name: "Name",
-      email: "Email",
-      subject: "Subject",
-      message: "Message",
-      sendMessage: "Send Message"
+      title: 'Get In Touch',
+      subtitle: 'Let\'s work together',
+      name: 'Your Name',
+      email: 'Your Email',
+      message: 'Your Message',
+      send: 'Send Message',
+      success: 'Message sent successfully!',
+      error: 'Error sending message. Please try again.',
+      contactInfo: 'Contact Information',
+      location: 'Location',
+      phone: 'Phone',
+      namePlaceholder: 'Enter your name',
+      emailPlaceholder: 'Enter your email',
+      subject: 'Subject',
+      subjectPlaceholder: 'Enter subject',
+      messagePlaceholder: 'Enter your message',
+      sending: 'Sending...',
+      sendMessage: 'Send Message',
+      successMessage: 'Your message has been sent successfully!'
     },
     footer: {
-      rights: "All rights reserved."
+      rights: 'All rights reserved.',
+      madeWith: 'Made with ❤️ by Marwa'
     }
   },
   fr: {
     nav: {
-      home: "Accueil",
-      about: "À propos",
-      projects: "Projets",
-      skills: "Compétences",
-      contact: "Contact"
+      home: 'Accueil',
+      about: 'À propos',
+      skills: 'Compétences',
+      projects: 'Projets',
+      contact: 'Contact'
     },
     hero: {
-      greeting: "Bonjour, je suis Marwan",
-      title: "Développeur Frontend & Designer UI",
-      description: "Je construis des applications web réactives et interactives avec des technologies modernes.",
-      contactMe: "Me Contacter",
-      viewProjects: "Voir les Projets"
+      title: 'Bonjour, je suis Marwan',
+      subtitle: 'Développeur Frontend & Designer UI',
+      description: 'Je construis des applications web responsives et interactives avec des technologies modernes.',
+      cta: 'Voir mes projets',
+      greeting: 'Bonjour, je suis',
+      contactMe: 'Contactez-moi',
+      viewProjects: 'Voir les projets'
     },
     about: {
-      title: "À Propos",
-      role: "Développeur Frontend & Designer UI",
-      description1: "Avec plus de 2 ans d'expérience dans la création d'applications web modernes, je me spécialise dans la création d'interfaces utilisateur réactives, accessibles et performantes.",
-      description2: "Je suis passionné par le code propre, l'expérience utilisateur et la mise à jour des dernières technologies web.",
-      name: "Nom",
-      email: "Email",
-      location: "Localisation",
-      freelance: "Freelance",
-      available: "Disponible",
-      downloadResume: "Télécharger CV"
-    },
-    projects: {
-      title: "Mes Projets",
-      all: "Tous",
-      web: "Web",
-      mobile: "Mobile",
-      liveDemo: "Démo Live",
-      code: "Code"
+      title: 'À propos de moi',
+      description: 'Je suis une développeuse full-stack passionnée avec de l\'expérience dans la construction d\'applications web modernes. J\'aime créer des solutions intuitives et efficaces à des problèmes complexes.',
+      experience: 'Années d\'expérience',
+      projects: 'Projets réalisés',
+      clients: 'Clients satisfaits',
+      role: 'Développeuse Full Stack',
+      name: 'Nom',
+      email: 'Email',
+      location: 'Localisation',
+      freelance: 'Freelance',
+      available: 'Disponible',
+      downloadResume: 'Télécharger CV'
     },
     skills: {
-      title: "Mes Compétences",
-      frontend: "Frontend",
-      backend: "Backend",
-      database: "Base de données",
-      languages: "Langages de Programmation",
-      tools: "Outils",
-      software: "Logiciels"
+      title: 'Compétences & Expertise',
+      subtitle: 'Technologies que j\'utilise',
+      frontend: 'Frontend',
+      backend: 'Backend',
+      database: 'Base de données',
+      programming: 'Langages de programmation',
+      tools: 'Outils',
+      software: 'Logiciels'
+    },
+    projects: {
+      title: 'Mes Projets',
+      subtitle: 'Travaux récents',
+      viewDemo: 'Démo Live',
+      viewCode: 'Voir le Code',
+      viewMore: 'Voir Plus de Projets',
+      filters: {
+        all: 'Tous',
+        web: 'Web',
+        app: 'Application'
+      },
+      project1: {
+        title: 'Site E-Commerce',
+        description: 'Une boutique en ligne complète avec panier d\'achat et intégration de paiement.'
+      },
+      project2: {
+        title: 'Site E-Commerce',
+        description: 'Une application de productivité pour organiser les tâches et suivre les progrès.'
+      },
+      project3: {
+        title: 'Mon Portfolio',
+        description: 'Tout ce que vous voulez savoir sur moi, vous le trouverez ici'
+      },
+      project4: {
+        title: 'Système de Gestion de Restaurant',
+        description: 'Une application web complète pour gérer les repas, commandes, réservations et plus encore.'
+      },
+      project5: {
+        title: 'Système de Gestion d\'Hôtel',
+        description: 'Une application web complète pour gérer les commandes, réservations et plus encore.'
+      }
     },
     contact: {
-      title: "Contactez-moi",
-      subtitle: "N'hésitez pas à me contacter pour des collaborations ou simplement pour dire bonjour !",
-      name: "Nom",
-      email: "Email",
-      subject: "Sujet",
-      message: "Message",
-      sendMessage: "Envoyer le Message"
+      title: 'Contactez-moi',
+      subtitle: 'Travaillons ensemble',
+      name: 'Votre nom',
+      email: 'Votre email',
+      message: 'Votre message',
+      send: 'Envoyer',
+      success: 'Message envoyé avec succès !',
+      error: 'Erreur lors de l\'envoi du message. Veuillez réessayer.',
+      contactInfo: 'Informations de contact',
+      location: 'Localisation',
+      phone: 'Téléphone',
+      namePlaceholder: 'Entrez votre nom',
+      emailPlaceholder: 'Entrez votre email',
+      subject: 'Sujet',
+      subjectPlaceholder: 'Entrez le sujet',
+      messagePlaceholder: 'Entrez votre message',
+      sending: 'Envoi en cours...',
+      sendMessage: 'Envoyer le message',
+      successMessage: 'Votre message a été envoyé avec succès !'
     },
     footer: {
-      rights: "Tous droits réservés."
+      rights: 'Tous droits réservés.',
+      madeWith: 'Fait avec ❤️ par Marwa'
     }
   },
   ar: {
     nav: {
-      home: "الرئيسية",
-      about: "عني",
-      projects: "المشاريع",
-      skills: "المهارات",
-      contact: "اتصل بي"
+      home: 'الرئيسية',
+      about: 'عني',
+      skills: 'المهارات',
+      projects: 'المشاريع',
+      contact: 'اتصل بي'
     },
     hero: {
-      greeting: "مرحباً، أنا مروان",
-      title: "مطور واجهات أمامية ومصمم واجهات المستخدم",
-      description: "أقوم ببناء تطبيقات الويب التفاعلية والمتجاوبة باستخدام التقنيات الحديثة.",
-      contactMe: "تواصل معي",
-      viewProjects: "عرض المشاريع"
+      title: 'مرحباً، أنا مروان',
+      subtitle: 'مطور واجهة المستخدم ومصمم واجهات',
+      description: 'أقوم ببناء تطبيقات ويب تفاعلية ومتجاوبة باستخدام التقنيات الحديثة.',
+      cta: 'عرض أعمالي',
+      greeting: 'مرحباً، أنا',
+      contactMe: 'تواصل معي',
+      viewProjects: 'عرض المشاريع'
     },
     about: {
-      title: "عني",
-      role: "مطور واجهات أمامية ومصمم واجهات المستخدم",
-      description1: "مع خبرة تزيد عن سنتين في بناء تطبيقات الويب الحديثة، أتخصص في إنشاء واجهات مستخدم متجاوبة وسهلة الوصول وعالية الأداء.",
-      description2: "أنا شغوف بالكود النظيف وتجربة المستخدم ومواكبة أحدث تقنيات الويب.",
-      name: "الاسم",
-      email: "البريد الإلكتروني",
-      location: "الموقع",
-      freelance: "العمل الحر",
-      available: "متاح",
-      downloadResume: "تحميل السيرة الذاتية"
-    },
-    projects: {
-      title: "مشاريعي",
-      all: "الكل",
-      web: "ويب",
-      mobile: "موبايل",
-      liveDemo: "عرض حي",
-      code: "الكود"
+      title: 'عني',
+      description: 'أنا مطورة ويب متكاملة شغوفة لديها خبرة في بناء تطبيقات الويب الحديثة. أحب إنشاء حلول بديهية وفعالة للمشاكل المعقدة.',
+      experience: 'سنوات الخبرة',
+      projects: 'المشاريع المكتملة',
+      clients: 'عملاء سعداء',
+      role: 'مطورة ويب متكاملة',
+      name: 'الاسم',
+      email: 'البريد الإلكتروني',
+      location: 'الموقع',
+      freelance: 'عمل حر',
+      available: 'متاح',
+      downloadResume: 'تحميل السيرة الذاتية'
     },
     skills: {
-      title: "مهاراتي",
-      frontend: "الواجهة الأمامية",
-      backend: "الواجهة الخلفية",
-      database: "قاعدة البيانات",
-      languages: "لغات البرمجة",
-      tools: "الأدوات",
-      software: "البرمجيات"
+      title: 'المهارات والخبرات',
+      subtitle: 'التقنيات التي أستخدمها',
+      frontend: 'واجهة المستخدم',
+      backend: 'الخلفية',
+      database: 'قاعدة البيانات',
+      programming: 'لغات البرمجة',
+      tools: 'الأدوات',
+      software: 'البرمجيات'
+    },
+    projects: {
+      title: 'مشاريعي',
+      subtitle: 'أعمال حديثة',
+      viewDemo: 'عرض حي',
+      viewCode: 'عرض الكود',
+      viewMore: 'عرض المزيد من المشاريع',
+      filters: {
+        all: 'الكل',
+        web: 'ويب',
+        app: 'تطبيق'
+      },
+      project1: {
+        title: 'موقع تجارة إلكترونية',
+        description: 'متجر إلكتروني متكامل مع سلة تسوق وتكامل الدفع.'
+      },
+      project2: {
+        title: 'موقع تجارة إلكترونية',
+        description: 'تطبيق إنتاجية لتنظيم المهام وتتبع التقدم.'
+      },
+      project3: {
+        title: 'معرض أعمالي',
+        description: 'كل ما تريد معرفته عني ستجده هنا'
+      },
+      project4: {
+        title: 'نظام إدارة المطاعم',
+        description: 'تطبيق ويب متكامل لإدارة وجبات المطعم والطلبات والحجوزات والمزيد.'
+      },
+      project5: {
+        title: 'نظام إدارة الفنادق',
+        description: 'تطبيق ويب متكامل لإدارة طلبات الفنادق والحجوزات والمزيد.'
+      }
     },
     contact: {
-      title: "تواصل معي",
-      subtitle: "لا تتردد في التواصل معي للتعاون أو فقط لتحية ودية!",
-      name: "الاسم",
-      email: "البريد الإلكتروني",
-      subject: "الموضوع",
-      message: "الرسالة",
-      sendMessage: "إرسال الرسالة"
+      title: 'تواصل معي',
+      subtitle: 'دعنا نعمل معاً',
+      name: 'اسمك',
+      email: 'بريدك الإلكتروني',
+      message: 'رسالتك',
+      send: 'إرسال',
+      success: 'تم إرسال الرسالة بنجاح!',
+      error: 'خطأ في إرسال الرسالة. يرجى المحاولة مرة أخرى.',
+      contactInfo: 'معلومات الاتصال',
+      location: 'الموقع',
+      phone: 'الهاتف',
+      namePlaceholder: 'أدخل اسمك',
+      emailPlaceholder: 'أدخل بريدك الإلكتروني',
+      subject: 'الموضوع',
+      subjectPlaceholder: 'أدخل الموضوع',
+      messagePlaceholder: 'أدخل رسالتك',
+      sending: 'جاري الإرسال...',
+      sendMessage: 'إرسال الرسالة',
+      successMessage: 'تم إرسال رسالتك بنجاح!'
     },
     footer: {
-      rights: "جميع الحقوق محفوظة."
+      rights: 'جميع الحقوق محفوظة.',
+      madeWith: 'صنع ب ❤️ بواسطة مروة'
     }
   }
-}; 
+};
+
+export default translations; 

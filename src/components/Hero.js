@@ -5,8 +5,8 @@ import { useLanguage } from "../contexts/LanguageContext";
 const Hero = ({ darkMode }) => {
   const [text, setText] = useState("");
   const { t, isRTL } = useLanguage();
-  const fullText = t('hero.greeting');
-  const [showTitle, setShowTitle] = useState(false);
+  const fullText = t('hero.title');
+  const [showContent, setShowContent] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
 
@@ -18,7 +18,7 @@ const Hero = ({ darkMode }) => {
         index++;
       } else {
         clearInterval(interval);
-        setTimeout(() => setShowTitle(true), 500);
+        setTimeout(() => setShowContent(true), 500);
       }
     }, 100);
     return () => clearInterval(interval);
@@ -63,26 +63,27 @@ const Hero = ({ darkMode }) => {
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-4">
               <span className="text-blue-500">{text}</span>
-              <span className="animate-blink">|</span>
+              {!showContent && <span className="animate-blink">|</span>}
             </h1>
 
-            {showTitle && (
-              <h2 
-                className="text-2xl md:text-3xl mb-6 animate-slideIn bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500"
-                data-aos="fade-up"
-                data-aos-delay="300"
-              >
-                {t('hero.title')}
-              </h2>
+            {showContent && (
+              <>
+                <h2 
+                  className="text-2xl md:text-3xl mb-6 animate-slideIn bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500"
+                  data-aos="fade-up"
+                  data-aos-delay="300"
+                >
+                  {t('hero.subtitle')}
+                </h2>
+                <p 
+                  className="text-lg mb-8 opacity-80 animate-fadeIn"
+                  data-aos="fade-up"
+                  data-aos-delay="500"
+                >
+                  {t('hero.description')}
+                </p>
+              </>
             )}
-
-            <p 
-              className="text-lg mb-8 opacity-80 animate-fadeIn"
-              data-aos="fade-up"
-              data-aos-delay="500"
-            >
-              {t('hero.description')}
-            </p>
 
             <div 
               className="flex flex-wrap gap-4"
@@ -106,8 +107,8 @@ const Hero = ({ darkMode }) => {
                 className={`group px-6 py-3 rounded-lg border ${
                   darkMode 
                     ? "border-gray-600 hover:border-blue-500" 
-                    : "border-gray-300 hover:border-blue-500"
-                } font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg relative overflow-hidden`}
+                    : "border-gray-300 hover:border-blue-500"}
+                 font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg relative overflow-hidden`}
                 onMouseEnter={() => setIsHovering(true)}
                 onMouseLeave={() => setIsHovering(false)}
               >
@@ -132,8 +133,7 @@ const Hero = ({ darkMode }) => {
               <img
                 src={profileImage}
                 alt="Developer Profile"
-                className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
-              />
+                className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               {isHovering && (
                 <div className="absolute inset-0 flex items-center justify-center">

@@ -9,9 +9,12 @@
     "@testing-library/user-event": "^13.5.0",
     "aos": "^2.3.4",
     "boxicons": "^2.1.4",
+    "date-fns": "^2.30.0",
     "framer-motion": "^12.12.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-github-calendar": "^4.5.7",
+    "react-github-contribution-calendar": "^2.2.0",
     "react-router-dom": "^6.22.3",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"

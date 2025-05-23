@@ -4,18 +4,19 @@ import projectimg2 from "../pic/project2.jpg";
 import projectimg3 from "../pic/project3.png";
 import restaurantProjectImg from "../pic/project4.png";
 import projectimg5 from "../pic/project5.png";
+import { useLanguage } from "../contexts/LanguageContext";
 
 const Projects = ({ darkMode }) => {
   const [activeFilter, setActiveFilter] = useState("all");
   const [hoveredProject, setHoveredProject] = useState(null);
+  const { t, isRTL } = useLanguage();
 
   // Projects data
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Website",
-      description:
-        "A full-featured online store with shopping cart and payment integration.",
+      title: t('projects.project1.title'),
+      description: t('projects.project1.description'),
       tags: ["Html", "CSS", "java-script"],
       image: projectimg1,
       dimo: "https://chipper-clafoutis-944b48.netlify.app/",
@@ -24,9 +25,8 @@ const Projects = ({ darkMode }) => {
     },
     {
       id: 2,
-      title: "E-Commerce Website",
-      description:
-        "A productivity app for organizing tasks and tracking progress.",
+      title: t('projects.project2.title'),
+      description: t('projects.project2.description'),
       tags: ["React", "Css", "Java script"],
       image: projectimg2,
       dimo: "https://github.com/1mr1mar/E-commers-website-React",
@@ -35,8 +35,8 @@ const Projects = ({ darkMode }) => {
     },
     {
       id: 3,
-      title: "My Portfolio",
-      description: "Anything you might want to know about me you'll finde here",
+      title: t('projects.project3.title'),
+      description: t('projects.project3.description'),
       tags: ["React", "talwind Css", "Node.js"],
       image: projectimg3,
       dimo: "https://marwan-ganbour.netlify.app/",
@@ -45,9 +45,8 @@ const Projects = ({ darkMode }) => {
     },
     {
       id: 4,
-      title: "Restaurant Management System",
-      description:
-        "A full-featured web app for managing restaurant meals, orders, reservations, and more.",
+      title: t('projects.project4.title'),
+      description: t('projects.project4.description'),
       tags: ["React", "Tailwind CSS", "Node.js", "Express", "MySQL"],
       image: restaurantProjectImg,
       dimo: "https://pfe-2025-delta.vercel.app/",
@@ -55,10 +54,9 @@ const Projects = ({ darkMode }) => {
       category: "web",
     },
     {
-    id: 5,
-      title: "hotel Management System",
-      description:
-        "A full-featured web app for managing hotel orders, reservations, and more.",
+      id: 5,
+      title: t('projects.project5.title'),
+      description: t('projects.project5.description'),
       tags: ["php", "Tailwind CSS", "MySQL"],
       image: projectimg5,
       dimo: "https://github.com/1mr1mar",
@@ -68,9 +66,9 @@ const Projects = ({ darkMode }) => {
   ];
 
   const filters = [
-    { name: "All", value: "all" },
-    { name: "Web", value: "web" },
-    { name: "App", value: "app" },
+    { name: t('projects.filters.all'), value: "all" },
+    { name: t('projects.filters.web'), value: "web" },
+    { name: t('projects.filters.app'), value: "app" },
   ];
 
   const filteredProjects =
@@ -81,16 +79,26 @@ const Projects = ({ darkMode }) => {
   return (
     <section
       id="projects"
-      className={`py-20 px-4 ${darkMode ? "bg-gray-900" : "bg-gray-50"}`}
+      className={`py-20 px-4 relative overflow-hidden ${
+        darkMode 
+          ? "bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900" 
+          : "bg-gradient-to-b from-gray-50 via-blue-50 to-gray-50"
+      }`}
     >
-      <div className="w-full max-w-screen-xl mx-auto">
+      {/* Background decoration */}
+      <div className="absolute inset-0 opacity-10 pointer-events-none">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl transform -translate-x-1/2 -translate-y-1/2"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl transform translate-x-1/2 translate-y-1/2"></div>
+      </div>
+
+      <div className="w-full max-w-screen-xl mx-auto relative z-10">
         <h2
-          className={`text-3xl md:text-4xl font-bold text-center mb-12 ${
+          className={`text-4xl md:text-5xl font-bold text-center mb-12 ${
             darkMode ? "text-white" : "text-gray-900"
           }`}
           data-aos="fade-up"
         >
-          My Projects
+          {t('projects.title')}
         </h2>
 
         <div
@@ -102,12 +110,12 @@ const Projects = ({ darkMode }) => {
             <button
               key={index}
               onClick={() => setActiveFilter(filter.value)}
-              className={`px-4 py-2 rounded-full transition-all duration-300 ${
+              className={`px-6 py-2.5 rounded-full transition-all duration-300 transform hover:scale-105 ${
                 activeFilter === filter.value
-                  ? "bg-blue-500 text-white"
+                  ? "bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg shadow-blue-500/30"
                   : darkMode
-                  ? "bg-gray-800 text-gray-300 hover:bg-gray-700"
-                  : "bg-white text-gray-700 hover:bg-gray-100"
+                  ? "bg-gray-800/50 backdrop-blur-sm text-gray-300 hover:bg-gray-700/50 border border-gray-700"
+                  : "bg-white/50 backdrop-blur-sm text-gray-700 hover:bg-gray-100/50 border border-gray-200"
               }`}
             >
               {filter.name}
@@ -119,45 +127,47 @@ const Projects = ({ darkMode }) => {
           {filteredProjects.map((project, index) => (
             <div
               key={project.id}
-              className={`rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl ${
-                darkMode ? "bg-gray-800" : "bg-white"
-              }`}
+              className={`group rounded-2xl overflow-hidden transition-all duration-500 ${
+                darkMode 
+                  ? "bg-gray-800/50 backdrop-blur-sm border border-gray-700/50" 
+                  : "bg-white/50 backdrop-blur-sm border border-gray-200/50"
+              } hover:shadow-2xl hover:shadow-blue-500/20`}
               data-aos="fade-up"
               data-aos-delay={index * 100}
               onMouseEnter={() => setHoveredProject(index)}
               onMouseLeave={() => setHoveredProject(null)}
             >
-              <div className="relative overflow-hidden">
+              <div className="relative overflow-hidden aspect-video">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-48 object-cover transition-transform duration-500 hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div
-                  className={`absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 transition-opacity duration-300 ${
+                  className={`absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 transition-opacity duration-500 ${
                     hoveredProject === index ? "opacity-100" : ""
                   }`}
                 >
-                  <div className="absolute bottom-0 left-0 right-0 p-4">
-                    <h3 className="text-white text-xl font-semibold mb-2">
+                  <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-4 transition-transform duration-500 group-hover:translate-y-0">
+                    <h3 className="text-white text-2xl font-bold mb-2">
                       {project.title}
                     </h3>
-                    <p className="text-gray-200 text-sm">
+                    <p className="text-gray-200 text-sm leading-relaxed">
                       {project.description}
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="p-4">
-                <div className="flex flex-wrap gap-2 mb-4">
+              <div className="p-6">
+                <div className="flex flex-wrap gap-2 mb-6">
                   {project.tags.map((tag, tagIndex) => (
                     <span
                       key={tagIndex}
-                      className={`px-2 py-1 text-xs rounded-full ${
+                      className={`px-3 py-1.5 text-sm rounded-full transition-all duration-300 ${
                         darkMode
-                          ? "bg-gray-700 text-gray-300"
-                          : "bg-gray-100 text-gray-700"
+                          ? "bg-gray-700/50 text-gray-300 hover:bg-gray-600/50"
+                          : "bg-gray-100/50 text-gray-700 hover:bg-gray-200/50"
                       }`}
                     >
                       {tag}
@@ -165,19 +175,26 @@ const Projects = ({ darkMode }) => {
                   ))}
                 </div>
 
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap gap-4">
                   <a
                     href={project.dimo}
-                    className="group px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/30 relative overflow-hidden"
+                    className="group flex-1 px-6 py-3 rounded-xl bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/30 relative overflow-hidden"
                   >
-                    <span className="relative z-10">Live Demo</span>
+                    <span className="relative z-10">{t('projects.viewDemo')}</span>
                     <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
                   </a>
                   <a
                     href={project.code}
-                    className="group px-6 py-3 rounded-lg border border-gray-300 hover:border-blue-500 font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg relative overflow-hidden"
+                    className={`group flex-1 px-6 py-3 rounded-xl border font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg relative overflow-hidden ${
+                      darkMode
+                        ? "border-gray-700 hover:border-blue-500"
+                        : "border-gray-200 hover:border-blue-500"
+                    }`}
                   >
-                    <span className="relative z-10">Code</span>
+                    <span className="relative z-10 flex items-center justify-center gap-2">
+                      <i className="bx bxl-github text-xl"></i>
+                      {t('projects.viewCode')}
+                    </span>
                     <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
                   </a>
                 </div>
@@ -187,7 +204,7 @@ const Projects = ({ darkMode }) => {
         </div>
 
         <div
-          className="text-center mt-12"
+          className="text-center mt-16"
           data-aos="fade-up"
           data-aos-delay="500"
         >
@@ -195,10 +212,10 @@ const Projects = ({ darkMode }) => {
             href="https://github.com/1mr1mar"
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/30 relative overflow-hidden"
+            className="group inline-flex items-center px-8 py-4 rounded-xl bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/30 relative overflow-hidden"
           >
-            <i className="bx bxl-github text-2xl mr-2 relative z-10"></i>
-            <span className="relative z-10">View More Projects</span>
+            <i className="bx bxl-github text-2xl mr-3 relative z-10"></i>
+            <span className="relative z-10">{t('projects.viewMore')}</span>
             <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
           </a>
         </div>
