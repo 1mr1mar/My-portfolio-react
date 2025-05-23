@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import profileImage from "../pic/profil.jpg";
+import { useLanguage } from "../contexts/LanguageContext";
 
 const Hero = ({ darkMode }) => {
   const [text, setText] = useState("");
-  const fullText = "Hi, I'm Marwan";
+  const { t, isRTL } = useLanguage();
+  const fullText = t('hero.greeting');
   const [showTitle, setShowTitle] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
@@ -20,7 +22,7 @@ const Hero = ({ darkMode }) => {
       }
     }, 100);
     return () => clearInterval(interval);
-  }, []);
+  }, [fullText]);
 
   // Handle mouse move for parallax effect
   const handleMouseMove = (e) => {
@@ -55,7 +57,7 @@ const Hero = ({ darkMode }) => {
       <div className="w-full max-w-screen-xl mx-auto relative z-0">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div 
-            className="order-2 md:order-1 animate-fadeIn"
+            className={`order-2 md:order-1 animate-fadeIn ${isRTL ? 'md:text-right' : ''}`}
             data-aos="fade-right"
             data-aos-duration="1000"
           >
@@ -70,7 +72,7 @@ const Hero = ({ darkMode }) => {
                 data-aos="fade-up"
                 data-aos-delay="300"
               >
-                Frontend Developer
+                {t('hero.title')}
               </h2>
             )}
 
@@ -79,8 +81,7 @@ const Hero = ({ darkMode }) => {
               data-aos="fade-up"
               data-aos-delay="500"
             >
-              I build responsive and interactive web applications with modern
-              technologies.
+              {t('hero.description')}
             </p>
 
             <div 
@@ -94,7 +95,7 @@ const Hero = ({ darkMode }) => {
                 onMouseEnter={() => setIsHovering(true)}
                 onMouseLeave={() => setIsHovering(false)}
               >
-                <span className="relative z-10">Contact Me</span>
+                <span className="relative z-10">{t('hero.contactMe')}</span>
                 <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
                 {isHovering && (
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
@@ -110,7 +111,7 @@ const Hero = ({ darkMode }) => {
                 onMouseEnter={() => setIsHovering(true)}
                 onMouseLeave={() => setIsHovering(false)}
               >
-                <span className="relative z-10">View Projects</span>
+                <span className="relative z-10">{t('hero.viewProjects')}</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
               </a>
             </div>
@@ -137,7 +138,7 @@ const Hero = ({ darkMode }) => {
               {isHovering && (
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg transform transition-transform duration-300 hover:scale-105">
-                    <p className="text-white font-medium">Frontend Developer</p>
+                    <p className="text-white font-medium">{t('hero.title')}</p>
                   </div>
                 </div>
               )}
