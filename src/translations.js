@@ -70,6 +70,10 @@ const translations = {
       project5: {
         title: 'Hotel Management System',
         description: 'A full-featured web app for managing hotel orders, reservations, and more.'
+      },
+      project6: {
+        title: 'XO Game',
+        description: 'A modern XO (Tic-Tac-Toe) game built with React, Tailwind CSS, and NestJS. Play against AI or friends online.'
       }
     },
     contact: {
@@ -169,6 +173,10 @@ const translations = {
       project5: {
         title: 'Système de Gestion d\'Hôtel',
         description: 'Une application web complète pour gérer les commandes, réservations et plus encore.'
+      },
+      project6: {
+        title: 'Jeu XO',
+        description: 'Un jeu XO (morpion) moderne développé avec React, Tailwind CSS et NestJS. Jouez contre l\'IA ou des amis en ligne.'
       }
     },
     contact: {
@@ -268,6 +276,10 @@ const translations = {
       project5: {
         title: 'نظام إدارة الفنادق',
         description: 'تطبيق ويب متكامل لإدارة طلبات الفنادق والحجوزات والمزيد.'
+      },
+      project6: {
+        title: 'لعبة XO',
+        description: 'لعبة XO (تيك تاك تو) حديثة مبنية باستخدام React وTailwind CSS وNestJS. العب ضد الذكاء الاصطناعي أو مع أصدقائك عبر الإنترنت.'
       }
     },
     contact: {

@@ -4,6 +4,7 @@ import projectimg2 from "../pic/project2.jpg";
 import projectimg3 from "../pic/project3.png";
 import restaurantProjectImg from "../pic/project4.png";
 import projectimg5 from "../pic/project5.png";
+import projectimg6 from "../pic/project6.png";
 import { useLanguage } from "../contexts/LanguageContext";
 
 const Projects = ({ darkMode }) => {
@@ -61,6 +62,16 @@ const Projects = ({ darkMode }) => {
       image: projectimg5,
       dimo: "https://github.com/1mr1mar",
       code: "https://github.com/1mr1mar",
+      category: "web",
+    },
+    {
+      id: 6,
+      title: t('projects.project6.title'),
+      description: t('projects.project6.description'),
+      tags: ["React", "Tailwind CSS", "NestJS"],
+      image: projectimg6,
+      dimo: "https://xo-game-zeta.vercel.app/",
+      code: "https://github.com/1mr1mar/XO---game",
       category: "web",
     }
   ];

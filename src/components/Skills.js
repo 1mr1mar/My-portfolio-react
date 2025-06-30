@@ -22,7 +22,9 @@ const Skills = ({ darkMode }) => {
       skills: [
         { name: "Node.js", icon: "bx bxl-nodejs" },
         { name: "Express.js", icon: "bx bx-server" },
+        { name: "NestJS", icon: "bx bx-cube" },
         { name: "RESTful APIs", icon: "bx bx-api" },
+        { name: "JWT", icon: "bx bx-key" },
         { name: "Authentication", icon: "bx bx-lock-alt" },
       ],
     },
@@ -31,6 +33,7 @@ const Skills = ({ darkMode }) => {
       skills: [
         { name: "MongoDB", icon: "bx bxl-mongodb" },
         { name: "MySQL", icon: "bx bx-data" },
+        { name: "Supabase", icon: "bx bx-cloud" },
         { name: "Database Design", icon: "bx bx-database" },
       ],
     },
