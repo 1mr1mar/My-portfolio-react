@@ -7,10 +7,10 @@ const translations = {
       projects: 'Projects',
       contact: 'Contact'
     },
-    hero: {
-      title: 'Hi, I\'m Marwan',
-      subtitle: 'Frontend Developer & UI Designer',
-      description: 'I build responsive and interactive web applications with modern technologies.',
+          hero: {
+        title: 'Hi, I\'m Marwan',
+        subtitle: 'Full Stack Developer & UI Designer',
+        description: 'I build responsive and interactive web applications with modern technologies.',
       cta: 'View My Work',
       greeting: 'Hi, I\'m',
       contactMe: 'Contact Me',
@@ -74,6 +74,22 @@ const translations = {
       project6: {
         title: 'XO Game',
         description: 'A modern XO (Tic-Tac-Toe) game built with React, Tailwind CSS, and NestJS. Play against AI or friends online.'
+      },
+      project7: {
+        title: 'VELAFLAM E-Commerce',
+        description: 'A premium flame collection e-commerce website featuring candles, torches, and fire-themed decorative pieces with modern design.'
+      },
+      project8: {
+        title: 'MAROBILLIO Furniture',
+        description: 'A handcrafted furniture e-commerce platform showcasing traditional craftsmanship with modern home decor solutions.'
+      },
+      project9: {
+        title: 'Task Stadium',
+        description: 'A task management platform with a unique sports-themed interface where tasks flow between zones like a football game.'
+      },
+      project10: {
+        title: 'PCS Store',
+        description: 'A comprehensive tech store e-commerce platform for gaming hardware, accessories, and computer components.'
       }
     },
     contact: {
@@ -112,7 +128,7 @@ const translations = {
     },
     hero: {
       title: 'Bonjour, je suis Marwan',
-      subtitle: 'Développeur Frontend & Designer UI',
+      subtitle: 'Développeur Full Stack & Designer UI',
       description: 'Je construis des applications web responsives et interactives avec des technologies modernes.',
       cta: 'Voir mes projets',
       greeting: 'Bonjour, je suis',
@@ -177,6 +193,22 @@ const translations = {
       project6: {
         title: 'Jeu XO',
         description: 'Un jeu XO (morpion) moderne développé avec React, Tailwind CSS et NestJS. Jouez contre l\'IA ou des amis en ligne.'
+      },
+      project7: {
+        title: 'VELAFLAM E-Commerce',
+        description: 'Un site e-commerce de collection de flammes premium présentant des bougies, des torches et des pièces décoratives sur le thème du feu avec un design moderne.'
+      },
+      project8: {
+        title: 'MAROBILLIO Meubles',
+        description: 'Une plateforme e-commerce de meubles artisanaux présentant l\'artisanat traditionnel avec des solutions de décoration d\'intérieur modernes.'
+      },
+      project9: {
+        title: 'Task Stadium',
+        description: 'Une plateforme de gestion de tâches avec une interface unique sur le thème du sport où les tâches circulent entre les zones comme un match de football.'
+      },
+      project10: {
+        title: 'PCS Store',
+        description: 'Une plateforme e-commerce complète de magasin technologique pour le matériel de jeu, les accessoires et les composants informatiques.'
       }
     },
     contact: {
@@ -215,7 +247,7 @@ const translations = {
     },
     hero: {
       title: 'مرحباً، أنا مروان',
-      subtitle: 'مطور واجهة المستخدم ومصمم واجهات',
+      subtitle: 'مطور ويب متكامل ومصمم واجهات',
       description: 'أقوم ببناء تطبيقات ويب تفاعلية ومتجاوبة باستخدام التقنيات الحديثة.',
       cta: 'عرض أعمالي',
       greeting: 'مرحباً، أنا',
@@ -280,6 +312,22 @@ const translations = {
       project6: {
         title: 'لعبة XO',
         description: 'لعبة XO (تيك تاك تو) حديثة مبنية باستخدام React وTailwind CSS وNestJS. العب ضد الذكاء الاصطناعي أو مع أصدقائك عبر الإنترنت.'
+      },
+      project7: {
+        title: 'VELAFLAM تجارة إلكترونية',
+        description: 'موقع تجارة إلكترونية لمجموعة ألعاب نارية فاخرة يعرض الشموع والشمعدانات والقطع الزخرفية ذات الطابع الناري بتصميم حديث.'
+      },
+      project8: {
+        title: 'MAROBILLIO أثاث',
+        description: 'منصة تجارة إلكترونية للأثاث اليدوي تعرض الحرف التقليدية مع حلول ديكور المنزل الحديثة.'
+      },
+      project9: {
+        title: 'ملعب المهام',
+        description: 'منصة إدارة المهام بواجهة فريدة مستوحاة من الرياضة حيث تتدفق المهام بين المناطق مثل مباراة كرة القدم.'
+      },
+      project10: {
+        title: 'متجر PCS',
+        description: 'منصة تجارة إلكترونية شاملة لمتجر التكنولوجيا للمعدات والأجهزة الطرفية ومكونات الكمبيوتر.'
       }
     },
     contact: {

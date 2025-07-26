@@ -5,6 +5,10 @@ import projectimg3 from "../pic/project3.png";
 import restaurantProjectImg from "../pic/project4.png";
 import projectimg5 from "../pic/project5.png";
 import projectimg6 from "../pic/project6.png";
+import projectimg7 from "../pic/project7.png";
+import projectimg8 from "../pic/project8.png";
+import projectimg9 from "../pic/project9.png";
+import projectimg10 from "../pic/proejct10.png";
 import { useLanguage } from "../contexts/LanguageContext";
 
 const Projects = ({ darkMode }) => {
@@ -72,6 +76,46 @@ const Projects = ({ darkMode }) => {
       image: projectimg6,
       dimo: "https://xo-game-zeta.vercel.app/",
       code: "https://github.com/1mr1mar/XO---game",
+      category: "web",
+    },
+    {
+      id: 7,
+      title: t('projects.project7.title'),
+      description: t('projects.project7.description'),
+      tags: ["React", "Tailwind CSS", "JavaScript" , "Supabase"],
+      image: projectimg7,
+      dimo: "https://velaflam.vercel.app/",
+      code: "https://github.com/1mr1mar",
+      category: "web",
+    },
+    {
+      id: 8,
+      title: t('projects.project8.title'),
+      description: t('projects.project8.description'),
+      tags: ["React", "Tailwind CSS", "Node.js" , "mongodb"],
+      image: projectimg8,
+      dimo: "https://marobillio-2.vercel.app/",
+      code: "https://github.com/1mr1mar",
+      category: "web",
+    },
+    {
+      id: 9,
+      title: t('projects.project9.title'),
+      description: t('projects.project9.description'),
+      tags: ["React", "Tailwind CSS", "PostgreSQL" , "Supabase"],
+      image: projectimg9,
+      dimo: "https://v0-football-task-management-kappa.vercel.app/",
+      code: "https://github.com/1mr1mar",
+      category: "web",
+    },
+    {
+      id: 10,
+      title: t('projects.project10.title'),
+      description: t('projects.project10.description'),
+      tags: ["React", "Tailwind CSS","nestJs", "MongoDB"],
+      image: projectimg10,
+      dimo: "https://pcs-store.vercel.app/en",
+      code: "https://github.com/1mr1mar",
       category: "web",
     }
   ];
