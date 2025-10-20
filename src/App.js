@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
+import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
@@ -42,7 +43,7 @@ const App = () => {
       setShowScrollTop(currentScroll > 300);
       
       // Determine active section based on scroll position
-      const sections = ['home', 'about', 'projects', 'skills', 'contact'];
+      const sections = ['home', 'about', 'experience', 'skills', 'projects', 'contact'];
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
@@ -101,8 +102,9 @@ const App = () => {
         <main className="transition-all duration-500 w-full">
           <Hero darkMode={darkMode} />
           <About darkMode={darkMode} />
-          <Projects darkMode={darkMode} />
+          <Experience darkMode={darkMode} />
           <Skills darkMode={darkMode} />
+          <Projects darkMode={darkMode} />
           <Contact darkMode={darkMode} />
         </main>
         

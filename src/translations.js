@@ -3,6 +3,7 @@ const translations = {
     nav: {
       home: 'Home',
       about: 'About',
+      experience: 'Experience',
       skills: 'Skills',
       projects: 'Projects',
       contact: 'Contact'
@@ -39,6 +40,103 @@ const translations = {
       programming: 'Programming Languages',
       tools: 'Tools',
       software: 'Software'
+    },
+    experience: {
+      title: 'Work Experience',
+      subtitle: 'My professional journey from IT support intern to senior developer',
+      cosumar: {
+        company: 'COSUMAR',
+        position: 'IT Support & Systems Intern',
+        duration: 'Jun 2024 - Aug 2024',
+        description: 'Started my professional journey as an IT Support intern, gaining hands-on experience in enterprise IT infrastructure and technical support',
+        location: 'Casablanca, Morocco',
+        type: 'Internship',
+        responsibilities: {
+          title: 'Key Responsibilities:',
+          items: [
+            'Provided technical support to 200+ employees across multiple departments',
+            'Troubleshot hardware and software issues for desktop computers and printers',
+            'Assisted in network infrastructure maintenance and configuration',
+            'Supported Windows and Linux server environments',
+            'Managed user accounts and permissions in Active Directory',
+            'Conducted system backups and data recovery procedures',
+            'Documented IT procedures and created user guides'
+          ]
+        },
+        achievements: {
+          title: 'Achievements:',
+          items: [
+            'Successfully resolved 95% of technical issues within SLA',
+            'Improved system uptime by 15% through proactive maintenance',
+            'Created comprehensive IT documentation that reduced support calls by 20%',
+            'Received excellent performance evaluation from IT manager'
+          ]
+        }
+      },
+      willowcy: {
+        company: 'WILLOWCY',
+        position: 'Full Stack Developer Intern',
+        duration: 'Jun 2025 - Aug 2025',
+        description: 'Advanced to Full Stack Developer internship, building modern web applications and gaining hands-on development experience',
+        location: 'Rabat, Morocco',
+        type: 'Internship',
+        responsibilities: {
+          title: 'Key Responsibilities:',
+          items: [
+            'Developed and maintained responsive web applications using modern frameworks',
+            'Built RESTful APIs and integrated third-party services',
+            'Collaborated with design team to implement pixel-perfect UIs',
+            'Optimized application performance and database queries',
+            'Implemented automated testing and CI/CD pipelines',
+            'Participated in code reviews and agile development processes',
+            'Worked closely with senior developers to learn best practices'
+          ]
+        },
+        achievements: {
+          title: 'Achievements:',
+          items: [
+            'Successfully delivered 5 web applications during internship period',
+            'Improved application loading speed by 40% through optimization',
+            'Reduced bug reports by 60% through comprehensive testing',
+            'Received excellent feedback from senior development team'
+          ]
+        }
+      },
+      opm: {
+        company: 'OPM',
+        position: 'Mail Agent & Email Systems Administrator',
+        duration: 'Sep 2025 - Present',
+        description: 'Currently working as a Mail Agent, managing email servers, handling email campaigns, and maintaining email infrastructure for enterprise clients',
+        location: 'Rabat, Morocco',
+        type: 'Full-time',
+        responsibilities: {
+          title: 'Key Responsibilities:',
+          items: [
+            'Manage and maintain enterprise email servers and infrastructure',
+            'Configure and optimize email delivery systems for maximum performance',
+            'Handle email campaigns and bulk email operations',
+            'Monitor email server performance and troubleshoot delivery issues',
+            'Implement email security measures and spam filtering systems',
+            'Manage email databases and user accounts across multiple domains',
+            'Collaborate with clients to set up custom email solutions and offers',
+            'Maintain email backup systems and disaster recovery procedures',
+            'Provide technical support for email-related issues and configurations'
+          ]
+        },
+        achievements: {
+          title: 'Achievements:',
+          items: [
+            'Successfully managed email infrastructure for 1000+ users',
+            'Improved email delivery rate by 25% through server optimization',
+            'Reduced spam incidents by 90% through advanced filtering',
+            'Implemented automated email backup systems reducing data loss risk to 0%',
+            'Successfully delivered 20+ email campaigns with 95%+ delivery rates'
+          ]
+        }
+      },
+      technologies: 'Technologies:',
+      selectCompany: 'Select a Company',
+      selectDescription: 'Click on any experience card to view detailed information'
     },
     projects: {
       title: 'My Projects',
@@ -122,6 +220,7 @@ const translations = {
     nav: {
       home: 'Accueil',
       about: 'À propos',
+      experience: 'Expérience',
       skills: 'Compétences',
       projects: 'Projets',
       contact: 'Contact'
@@ -158,6 +257,103 @@ const translations = {
       programming: 'Langages de programmation',
       tools: 'Outils',
       software: 'Logiciels'
+    },
+    experience: {
+      title: 'Expérience Professionnelle',
+      subtitle: 'Mon parcours professionnel de stagiaire IT à développeur senior',
+      cosumar: {
+        company: 'COSUMAR',
+        position: 'Stagiaire Support IT & Systèmes',
+        duration: 'Juin 2024 - Août 2024',
+        description: 'J\'ai commencé mon parcours professionnel en tant que stagiaire Support IT, acquérant une expérience pratique en infrastructure IT d\'entreprise et support technique',
+        location: 'Casablanca, Maroc',
+        type: 'Stage',
+        responsibilities: {
+          title: 'Responsabilités Clés:',
+          items: [
+            'Fourni un support technique à plus de 200 employés dans plusieurs départements',
+            'Résolu les problèmes matériels et logiciels pour ordinateurs de bureau et imprimantes',
+            'Assisté dans la maintenance et configuration de l\'infrastructure réseau',
+            'Supporté les environnements serveurs Windows et Linux',
+            'Géré les comptes utilisateurs et permissions dans Active Directory',
+            'Effectué des sauvegardes système et procédures de récupération de données',
+            'Documenté les procédures IT et créé des guides utilisateurs'
+          ]
+        },
+        achievements: {
+          title: 'Réalisations:',
+          items: [
+            'Résolu avec succès 95% des problèmes techniques dans les délais SLA',
+            'Amélioré le temps de fonctionnement du système de 15% grâce à la maintenance proactive',
+            'Créé une documentation IT complète qui a réduit les appels de support de 20%',
+            'Reçu une excellente évaluation de performance du responsable IT'
+          ]
+        }
+      },
+      willowcy: {
+        company: 'WILLOWCY',
+        position: 'Stagiaire Développeur Full Stack',
+        duration: 'Juin 2025 - Août 2025',
+        description: 'Évolué vers un stage de Développeur Full Stack, développant des applications web modernes et acquérant une expérience pratique en développement',
+        location: 'Rabat, Maroc',
+        type: 'Stage',
+        responsibilities: {
+          title: 'Responsabilités Clés:',
+          items: [
+            'Développé et maintenu des applications web responsives utilisant des frameworks modernes',
+            'Construit des APIs RESTful et intégré des services tiers',
+            'Collaboré avec l\'équipe de design pour implémenter des interfaces parfaites',
+            'Optimisé les performances d\'application et requêtes de base de données',
+            'Implémenté des tests automatisés et pipelines CI/CD',
+            'Participé aux revues de code et processus de développement agile',
+            'Travaillé étroitement avec les développeurs seniors pour apprendre les meilleures pratiques'
+          ]
+        },
+        achievements: {
+          title: 'Réalisations:',
+          items: [
+            'Livré avec succès 5 applications web pendant la période de stage',
+            'Amélioré la vitesse de chargement des applications de 40% grâce à l\'optimisation',
+            'Réduit les rapports de bugs de 60% grâce aux tests complets',
+            'Reçu d\'excellents retours de l\'équipe de développement senior'
+          ]
+        }
+      },
+      opm: {
+        company: 'OPM',
+        position: 'Agent Mail & Administrateur Systèmes Email',
+        duration: 'Sep 2025 - Présent',
+        description: 'Actuellement en tant qu\'Agent Mail, gérant les serveurs email, traitant les campagnes email et maintenant l\'infrastructure email pour les clients d\'entreprise',
+        location: 'Rabat, Maroc',
+        type: 'Temps plein',
+        responsibilities: {
+          title: 'Responsabilités Clés:',
+          items: [
+            'Gérer et maintenir les serveurs email d\'entreprise et l\'infrastructure',
+            'Configurer et optimiser les systèmes de livraison email pour des performances maximales',
+            'Traiter les campagnes email et opérations d\'email en masse',
+            'Surveiller les performances des serveurs email et résoudre les problèmes de livraison',
+            'Implémenter des mesures de sécurité email et systèmes de filtrage anti-spam',
+            'Gérer les bases de données email et comptes utilisateurs sur plusieurs domaines',
+            'Collaborer avec les clients pour configurer des solutions email personnalisées et offres',
+            'Maintenir les systèmes de sauvegarde email et procédures de récupération d\'urgence',
+            'Fournir un support technique pour les problèmes et configurations liés à l\'email'
+          ]
+        },
+        achievements: {
+          title: 'Réalisations:',
+          items: [
+            'Géré avec succès l\'infrastructure email pour plus de 1000 utilisateurs',
+            'Amélioré le taux de livraison email de 25% grâce à l\'optimisation serveur',
+            'Réduit les incidents de spam de 90% grâce au filtrage avancé',
+            'Implémenté des systèmes de sauvegarde email automatisés réduisant le risque de perte de données à 0%',
+            'Livré avec succès plus de 20 campagnes email avec des taux de livraison de 95%+'
+          ]
+        }
+      },
+      technologies: 'Technologies:',
+      selectCompany: 'Sélectionner une Entreprise',
+      selectDescription: 'Cliquez sur n\'importe quelle carte d\'expérience pour voir les informations détaillées'
     },
     projects: {
       title: 'Mes Projets',
@@ -241,6 +437,7 @@ const translations = {
     nav: {
       home: 'الرئيسية',
       about: 'عني',
+      experience: 'الخبرة',
       skills: 'المهارات',
       projects: 'المشاريع',
       contact: 'اتصل بي'
@@ -277,6 +474,103 @@ const translations = {
       programming: 'لغات البرمجة',
       tools: 'الأدوات',
       software: 'البرمجيات'
+    },
+    experience: {
+      title: 'الخبرة المهنية',
+      subtitle: 'رحلتي المهنية من متدرب دعم تقني إلى مطور كبير',
+      cosumar: {
+        company: 'كوسومار',
+        position: 'متدرب دعم تقني وأنظمة',
+        duration: 'يونيو 2024 - أغسطس 2024',
+        description: 'بدأت رحلتي المهنية كمتدرب دعم تقني، واكتسبت خبرة عملية في البنية التحتية لتكنولوجيا المعلومات المؤسسية والدعم التقني',
+        location: 'الدار البيضاء، المغرب',
+        type: 'تدريب',
+        responsibilities: {
+          title: 'المسؤوليات الرئيسية:',
+          items: [
+            'قدمت دعماً تقنياً لأكثر من 200 موظف في أقسام متعددة',
+            'حللت مشاكل الأجهزة والبرامج لأجهزة الكمبيوتر المكتبية والطابعات',
+            'ساعدت في صيانة وتكوين البنية التحتية للشبكة',
+            'دعمت بيئات خوادم Windows و Linux',
+            'أدرت حسابات المستخدمين والأذونات في Active Directory',
+            'أجريت نسخ احتياطية للنظام وإجراءات استعادة البيانات',
+            'وثقت إجراءات تكنولوجيا المعلومات وأنشأت أدلة المستخدمين'
+          ]
+        },
+        achievements: {
+          title: 'الإنجازات:',
+          items: [
+            'حللت بنجاح 95% من المشاكل التقنية ضمن SLA',
+            'حسنت وقت تشغيل النظام بنسبة 15% من خلال الصيانة الاستباقية',
+            'أنشأت وثائق شاملة لتكنولوجيا المعلومات قللت من مكالمات الدعم بنسبة 20%',
+            'تلقيت تقييم أداء ممتاز من مدير تكنولوجيا المعلومات'
+          ]
+        }
+      },
+      willowcy: {
+        company: 'ويلوسي',
+        position: 'متدرب مطور ويب متكامل',
+        duration: 'يونيو 2025 - أغسطس 2025',
+        description: 'تطورت إلى تدريب مطور ويب متكامل، وبناء تطبيقات ويب حديثة واكتساب خبرة عملية في التطوير',
+        location: 'الرباط، المغرب',
+        type: 'تدريب',
+        responsibilities: {
+          title: 'المسؤوليات الرئيسية:',
+          items: [
+            'طورت وصنت تطبيقات ويب متجاوبة باستخدام أطر العمل الحديثة',
+            'بنيت APIs RESTful ودمجت خدمات الطرف الثالث',
+            'تعاونت مع فريق التصميم لتنفيذ واجهات مثالية',
+            'حسنت أداء التطبيقات واستعلامات قاعدة البيانات',
+            'نفذت اختبارات آلية وخطوط أنابيب CI/CD',
+            'شاركت في مراجعات الكود وعمليات التطوير الرشيق',
+            'عملت بشكل وثيق مع المطورين الكبار لتعلم أفضل الممارسات'
+          ]
+        },
+        achievements: {
+          title: 'الإنجازات:',
+          items: [
+            'سلمت بنجاح 5 تطبيقات ويب خلال فترة التدريب',
+            'حسنت سرعة تحميل التطبيقات بنسبة 40% من خلال التحسين',
+            'قللت من تقارير الأخطاء بنسبة 60% من خلال الاختبار الشامل',
+            'تلقيت ردود فعل ممتازة من فريق التطوير الكبير'
+          ]
+        }
+      },
+      opm: {
+        company: 'OPM',
+        position: 'وكيل بريد إلكتروني ومدير أنظمة البريد الإلكتروني',
+        duration: 'سبتمبر 2025 - الحاضر',
+        description: 'أعمل حالياً كوكيل بريد إلكتروني، وأدير خوادم البريد الإلكتروني وأتعامل مع حملات البريد الإلكتروني وأحافظ على البنية التحتية للبريد الإلكتروني للعملاء المؤسسيين',
+        location: 'الرباط، المغرب',
+        type: 'دوام كامل',
+        responsibilities: {
+          title: 'المسؤوليات الرئيسية:',
+          items: [
+            'أدير وأحافظ على خوادم البريد الإلكتروني المؤسسية والبنية التحتية',
+            'أكوّن وأحسن أنظمة تسليم البريد الإلكتروني لأقصى أداء',
+            'أتعامل مع حملات البريد الإلكتروني وعمليات البريد الإلكتروني المجمعة',
+            'أراقب أداء خوادم البريد الإلكتروني وأحل مشاكل التسليم',
+            'أنفذ تدابير أمان البريد الإلكتروني وأنظمة تصفية البريد المزعج',
+            'أدير قواعد بيانات البريد الإلكتروني وحسابات المستخدمين عبر نطاقات متعددة',
+            'أتعاون مع العملاء لإعداد حلول بريد إلكتروني مخصصة وعروض',
+            'أحافظ على أنظمة النسخ الاحتياطي للبريد الإلكتروني وإجراءات التعافي من الكوارث',
+            'أقدم الدعم التقني لمشاكل وتكوينات البريد الإلكتروني'
+          ]
+        },
+        achievements: {
+          title: 'الإنجازات:',
+          items: [
+            'أدرت بنجاح البنية التحتية للبريد الإلكتروني لأكثر من 1000 مستخدم',
+            'حسنت معدل تسليم البريد الإلكتروني بنسبة 25% من خلال تحسين الخادم',
+            'قللت من حوادث البريد المزعج بنسبة 90% من خلال التصفية المتقدمة',
+            'نفذت أنظمة النسخ الاحتياطي الآلية للبريد الإلكتروني قللت من مخاطر فقدان البيانات إلى 0%',
+            'سلمت بنجاح أكثر من 20  حملة بريد إلكتروني بمعدلات تسليم 95%+'
+          ]
+        }
+      },
+      technologies: 'التقنيات:',
+      selectCompany: 'اختر شركة',
+      selectDescription: 'انقر على أي بطاقة خبرة لعرض المعلومات التفصيلية'
     },
     projects: {
       title: 'مشاريعي',
